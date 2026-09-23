@@ -1,0 +1,138 @@
+#trading-view {
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    background-color: #191c24;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.trading-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #222631;
+    border-bottom: 1px solid #333;
+    gap: 20px;
+}
+
+#back-btn {
+    background-color: #333;
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+}
+
+.trading-header h2 {
+    margin: 0;
+}
+
+.trading-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.zoom-controls {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.zoom-controls button {
+    background-color: #333;
+    color: white;
+    padding: 5px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.trading-body {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.trading-sidebar {
+    background-color: #222631;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-sidebar {
+    border-right: 1px solid #333;
+    overflow-y: auto;
+}
+
+.right-sidebar {
+    border-left: 1px solid #333;
+}
+
+.trading-sidebar h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #aaa;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.trading-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trading-sidebar li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+.trading-chart-container {
+    flex: 1;
+    position: relative;
+    background-color: #131722;
+}
+
+.order-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.amount-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.amount-input input {
+    background-color: #191c24;
+    border: 1px solid #444;
+    color: white;
+}
+
+.trade-btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.trade-btn:hover {
+    opacity: 0.8;
+}
+
+.up-btn {
+    background-color: #26a69a;
+}
+
+.down-btn {
+    background-color: #ef5350;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photon Stock Ticker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 1400px; margin: 0 auto; width: 100%; padding: 20px; box-sizing: border-box;">
+        <header>
+            <h1>Photon</h1>
+            <div class="status-container">
+                <span id="connection-dot" class="status-dot connecting"></span>
+                <span id="connection-status">Connecting...</span>
+            </div>
+        </header>
+
+        <main style="width: 100%;">
+            <section class="controls" id="grid-controls">
+                <div class="search-container">
+                    <input type="text" id="subscription-input" placeholder="e.g. AAPL, GOOGL (leave blank for all)" autocomplete="off">
+                    <ul id="search-results" class="search-results hidden"></ul>
+                </div>
+                <button id="subscribe-btn">Update Subscription</button>
+            </section>
+
+            <section id="ticker-grid" class="grid">
+            </section>
+
+            <section id="trading-view" class="hidden">
+                <div class="trading-header">
+                    <button id="back-btn">← Back to Grid</button>
+                    <h2 id="trading-symbol">AAPL</h2>
+                    <div id="trading-price" class="trading-price">$150.00</div>
+                    <div class="zoom-controls">
+                        <button id="zoom-in-btn" title="Zoom In">+</button>
+                        <button id="zoom-out-btn" title="Zoom Out">-</button>
+                        <button id="zoom-reset-btn" title="Reset Zoom">Reset</button>
+                    </div>
+                </div>
+                
+                <div class="trading-body">
+                    <div class="trading-sidebar left-sidebar">
+                        <h3>History</h3>
+                        <ul id="trade-history"></ul>
+                    </div>
+                    
+                    <div class="trading-chart-container" id="chart-container"></div>
+                    
+                    <div class="trading-sidebar right-sidebar">
+                        <div class="order-panel">
+                            <h3>Place Order</h3>
+                            <div class="amount-input">
+                                <label>Amount</label>
+                                <input type="number" value="1000">
+                            </div>
+                            <button class="trade-btn up-btn">UP</button>
+                            <button class="trade-btn down-btn">DOWN</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lightweight-charts@3.8.0/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

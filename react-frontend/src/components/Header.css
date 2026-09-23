@@ -1,0 +1,43 @@
+.app-header {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.connecting {
+    background-color: #ff9800;
+    animation: pulse 1s infinite alternate;
+}
+
+.status-dot.live {
+    background-color: var(--up-color);
+}
+
+.status-dot.disconnected {
+    background-color: var(--down-color);
+}
